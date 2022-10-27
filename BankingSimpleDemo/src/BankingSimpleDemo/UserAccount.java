@@ -18,7 +18,12 @@ public class UserAccount {
 
     // Withdrawal
     public void withdrawal(double amount) {
-        UserBalance = UserBalance - amount;
+        if(amount <= UserBalance) {
+            UserBalance = UserBalance - amount;
+        }
+        else {
+            System.err.println("Transaction cancelled due to insuffient funds");
+        }
     }
 
     // Get Balance

@@ -1,7 +1,5 @@
 package BankingSimpleDemo;
 
-import java.sql.SQLOutput;
-
 public class BankMain {
 
     public static void main(String[] args){
@@ -11,9 +9,12 @@ public class BankMain {
 
         // Create customer2
         UserAccount customer2 = new UserAccount();
-        customer2.deposit(100);
+        customer2.withdrawal(400);
 
+        System.out.println("Customer1 has a balance of: ");
         System.out.println(customer1.getUserBalance());
+
+        System.out.println("Customer2 has a balance of: ");
         System.out.println(customer2.getUserBalance());
     }
 
