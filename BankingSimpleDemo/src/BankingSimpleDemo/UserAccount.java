@@ -1,6 +1,5 @@
+/*
 package BankingSimpleDemo;
-
-import java.lang.reflect.AccessibleObject;
 
 public class UserAccount {
 
@@ -22,7 +21,7 @@ public class UserAccount {
             UserBalance = UserBalance - amount;
         }
         else {
-            System.err.println("Transaction cancelled due to insuffient funds");
+            System.err.println("Transaction cancelled due to insufficient funds");
         }
     }
 
@@ -31,4 +30,4 @@ public class UserAccount {
         return UserBalance;
     }
 
-}
+}*/
