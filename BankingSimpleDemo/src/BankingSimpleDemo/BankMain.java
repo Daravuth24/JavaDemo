@@ -8,7 +8,7 @@ public class BankMain {
         Scanner sc = new Scanner(System.in);
 
         // Create account
-        System.out.println("Enter amount of customers to create: ");
+        System.out.println("Enter amount of customer accounts to create: ");
         int n = sc.nextInt();
         AccountDetails C[] = new AccountDetails[n];
         for (int i = 0; i < C.length; i++) {
@@ -19,8 +19,8 @@ public class BankMain {
         int ch;
 
         do {
-
-            System.out.println("1.Display account \n2.Search account ID \n3.Deposit into account \n4. Withdraw from account \n5.Exit");
+            System.out.println("\n*** Welcome to DV's Banking Service ***");
+            System.out.println("1. Display account \n2. Search account ID \n3. Deposit into account \n4. Withdraw from account \n5. Exit");
             System.out.println("Enter your choice: ");
             ch = sc.nextInt();
 
@@ -32,6 +32,7 @@ public class BankMain {
                     for (int i = 0; i < C.length; i++) {
                         C[i].displayAccount();
                     }
+                    break;
 
                 case 2:
                     // Search for account using ID
@@ -47,7 +48,7 @@ public class BankMain {
                         }
                     }
                     if (!found) {
-                        System.out.println("Not found! Exiting...");
+                        System.out.println("The ID you have entered is not found! Please try again with another ID.");
                     }
                     break;
 
@@ -64,12 +65,13 @@ public class BankMain {
                         }
                     }
                     if (!found) {
-                        System.out.println("Not found");
+                        System.out.println("The ID you have entered is not found! Please try again with another ID.");
                     }
                     break;
 
                 case 4:
-                    System.out.println("Enter your account number: ");
+                    // Withdraw from account
+                    System.out.println("Enter your account ID: ");
                     accId = sc.next();
                     found = false;
                     for (int i = 0; i< C.length; i++) {
@@ -80,17 +82,18 @@ public class BankMain {
                         }
                     }
                     if (!found) {
-                        System.out.println("Not found");
+                        System.out.println("The ID you have entered is not found! Please try again with another ID.");
                     }
                     break;
 
                 case 5:
-                    System.out.println("bye");
+                    // Exit from system
+                    System.out.println("Thank you for using DV's banking service! Have a good day!");
                     break;
 
-                    }
             }
-            while(ch != 5);
-
         }
+        while(ch != 5);
+
     }
+}

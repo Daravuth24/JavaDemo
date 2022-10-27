@@ -42,22 +42,24 @@ class AccountDetails {
         System.out.println("Your bank is: " + bankName);
     }
 
+    // Deposit method
     public void deposit(){
         long amount;
         System.out.println("Enter the amount you want to deposit: ");
         amount = sc.nextLong();
         balance = balance + amount;
+        System.out.println("Balance after depositing: " + balance);
     }
-
+    // Withdrawal method
     public void withdrawal() {
         long amount;
         System.out.println("Enter the amount you want to withdraw: ");
         amount = sc.nextLong();
         if(balance >= amount) {
             balance = balance - amount;
-            System.out.println("Balance after withdrawal" + balance);
+            System.out.println("Balance after withdrawal: " + balance);
         } else {
-            System.out.println("Insufficient funds");
+            System.out.println("Error! You have insufficient funds");
         }
     }
 
