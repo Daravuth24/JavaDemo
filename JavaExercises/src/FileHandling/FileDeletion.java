@@ -6,7 +6,7 @@ public class FileDeletion {
 
     public static void main(String[] args) {
 
-        File myObj = new File("filename.txt");
+        File myObj = new File("testfile.txt");
 
         if (myObj.delete()) {
             System.out.println("Deleted the file: " + myObj.getName());

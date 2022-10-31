@@ -9,8 +9,8 @@ public class FileWrite {
     public static void main(String[] args) {
 
         try {
-            FileWriter myWriter = new FileWriter("filename.txt");
-            myWriter.write("Files in Java might be tricky, but it is fun enough!");
+            FileWriter myWriter = new FileWriter("testfile.txt");
+            myWriter.write("Hello World!");
             myWriter.close();
             System.out.println("Successfully wrote to the file.");
 
