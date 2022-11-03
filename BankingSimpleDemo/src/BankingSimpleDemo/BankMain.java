@@ -19,7 +19,7 @@ public class BankMain {
         int ch;
 
         do {
-            System.out.println("\n*** Welcome to DV's Banking Service ***");
+
             System.out.println("1. Display account \n2. Search account ID \n3. Deposit into account \n4. Withdraw from account \n5. Exit");
             System.out.println("Enter your choice: ");
             ch = sc.nextInt();
@@ -97,3 +97,5 @@ public class BankMain {
 
     }
 }
+
+// Try using the concept of custom exception
